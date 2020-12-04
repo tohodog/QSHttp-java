@@ -1,5 +1,7 @@
 QSHttp-java
 ====
+[![qshttp][qshttpsvg]][star]  [![License][licensesvg]][license]
+
 开箱即用的java-http框架,GET、POST、表单、JSON、上传、下载等等统统同一行代码搞定! One Code Man!
 AIP精简到极致,调用没有一行多余代码,几乎零成本使用,大道至简 
 
@@ -186,3 +188,9 @@ https://api.reol.top/api_test
   
 [starsvg]: https://img.shields.io/github/stars/tohodog/QSHttp-java.svg?style=social&label=Stars
 [star]: https://github.com/tohodog/QSHttp-java
+
+[licensesvg]: https://img.shields.io/badge/License-Apache--2.0-red.svg
+[license]: https://gitee.com/sakaue/QSRPC-starter/raw/master/LICENSE
+
+[qshttpsvg]: https://img.shields.io/badge/QSHttp--java-1.5.3-blue.svg
+
