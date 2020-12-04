@@ -34,8 +34,9 @@ public class Test extends TestCase {
     /**
      * Rigourous Test :-)
      */
-    public void testApp() throws ExecutionException, InterruptedException {
-        QSHttp.get("https://api.reol.top/api_test")
+    public void testApp() throws Exception {
+        QSHttp.get("https://baidu.com")
+                .resultByBytes()
                 .asyncExecute(new HttpCallback() {
                     @Override
                     public void onSuccess(ResponseParams response) {
@@ -48,7 +49,7 @@ public class Test extends TestCase {
 
                     }
                 });
-        Log.i(QSHttp.get("https://api.reol.top/api_test").futureExecute().get().string());
-        Log.i(QSHttp.get("https://api.reol.top/api_test").syncExecute().string());
+        Log.i(QSHttp.get("https://baidu.com").resultByBytes().futureExecute().get().string());
+        Log.i(QSHttp.get("https://baidu.com").resultByBytes().syncExecute().string());
     }
 }

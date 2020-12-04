@@ -229,7 +229,7 @@ public class RequestParams {
 
         private String url;
         private RequestBody requestBody;
-        private Map<String, String> headers;
+        private Map<String, String> headers = new HashMap<>();
         private Map<String, Object> params;
         private List<String> pathParams;
         private Map<String, RequestBody> multipartBody;
@@ -278,6 +278,10 @@ public class RequestParams {
                 } else {
                     url = base + url.substring(1);
                 }
+            }
+
+            if (!headers.containsKey("User-Agent") && !headers.containsKey("user-agent")) {
+                header("User-Agent", "QSHttp/1.5 .3");
             }
 
             RequestParams requestParams = new RequestParams();
@@ -698,15 +702,18 @@ public class RequestParams {
     }
 
     public ResponseParams execute() throws Exception {
+        ResponseParams responseParams;
         if (qsClient == null)
-            return QSHttpManage.getQSHttpClient().execute(this);
+            responseParams = QSHttpManage.getQSHttpClient().execute(this);
         else {
             QSHttpClient qsHttpClient = QSHttpManage.getQSHttpClient(qsClient);
             if (qsHttpClient == null) {
                 throw new Exception("can't find client:" + qsClient);
             }
-            return qsHttpClient.execute(this);
+            responseParams = qsHttpClient.execute(this);
         }
+        if (responseParams.isSuccess()) return responseParams;
+        throw responseParams.exception();
     }
 
     public Future<ResponseParams> futureExecute() {
