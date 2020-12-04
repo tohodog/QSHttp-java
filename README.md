@@ -13,7 +13,11 @@ AIP精简到极致,调用没有一行多余代码,几乎零成本使用,大道�
 
 ### Maven
 ```
-
+<dependency>
+    <groupId>com.github.tohodog</groupId>
+    <artifactId>qshttp-java</artifactId>
+    <version>1.5.3</version>
+</dependency>
 ```
 
 ### 最简单的使用例子
