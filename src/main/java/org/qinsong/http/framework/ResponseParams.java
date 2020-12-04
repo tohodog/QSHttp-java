@@ -28,7 +28,7 @@ public class ResponseParams {
     private Map<String, List<String>> headers;//头参数
     private RequestParams requestParams;
 
-    private Exception exception;//出错时不为空
+    private HttpException exception;//出错时不为空
 
     //get
     public int requestID() {
@@ -82,7 +82,7 @@ public class ResponseParams {
         return requestParams;
     }
 
-    public Exception exception() {
+    public HttpException exception() {
         return exception;
     }
 
@@ -107,7 +107,7 @@ public class ResponseParams {
     }
 
 
-    public ResponseParams setException(Exception exception) {
+    public ResponseParams setException(HttpException exception) {
         this.exception = exception;
         return this;
     }

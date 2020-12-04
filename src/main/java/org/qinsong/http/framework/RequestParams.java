@@ -701,19 +701,18 @@ public class RequestParams {
         }
     }
 
-    public ResponseParams execute() throws Exception {
+    public ResponseParams execute() throws HttpException {
         ResponseParams responseParams;
         if (qsClient == null)
             responseParams = QSHttpManage.getQSHttpClient().execute(this);
         else {
             QSHttpClient qsHttpClient = QSHttpManage.getQSHttpClient(qsClient);
             if (qsHttpClient == null) {
-                throw new Exception("can't find client:" + qsClient);
+                throw HttpException.Custom("can't find client:" + qsClient);
             }
             responseParams = qsHttpClient.execute(this);
         }
-        if (responseParams.isSuccess()) return responseParams;
-        throw responseParams.exception();
+        return responseParams;
     }
 
     public Future<ResponseParams> futureExecute() {

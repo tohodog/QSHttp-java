@@ -41,7 +41,7 @@ public class QSHttpClient {
     }
 
 
-    public ResponseParams execute(final RequestParams request) throws Exception {
+    public ResponseParams execute(final RequestParams request) throws HttpException {
         ResponseParams responseParams = (ResponseParams) _execute(request, null);
         if (!responseParams.isSuccess()) throw responseParams.exception();
         return responseParams;
@@ -78,10 +78,19 @@ public class QSHttpClient {
                     response.setSuccess(true);
                 } catch (Exception e) {
                     e.printStackTrace();
-                    response = new ResponseParams();
-                    response.setException(e);
+                    HttpException httpException;
+                    if (e instanceof HttpException) {
+                        httpException = (HttpException) e;
+                        response = ((HttpException) e).responseParams();
+                    } else {
+                        httpException = HttpException.Run(e);
+                    }
+                    if (response == null)
+                        response = new ResponseParams();
+                    response.setException(httpException);
                     response.setSuccess(false);
                 }
+
                 //获取最新请求参数,拦截器里可能修改了
                 RequestParams _request = threadLocal.get();
                 assert _request != null;
