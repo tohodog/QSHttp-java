@@ -1,12 +1,10 @@
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
-import org.song.http.Log;
-import org.song.http.QSHttp;
-import org.song.http.framework.HttpException;
-import org.song.http.framework.ResponseParams;
-import org.song.http.framework.ability.HttpCallback;
-
-import java.util.concurrent.ExecutionException;
+import org.qinsong.http.Log;
+import org.qinsong.http.QSHttp;
+import org.qinsong.http.framework.HttpException;
+import org.qinsong.http.framework.ResponseParams;
+import org.qinsong.http.framework.ability.HttpCallback;
 
 /**
  * Created by QSong

@@ -18,7 +18,7 @@ package okhttp3;
 import okhttp3.internal.Util;
 import okio.Buffer;
 import okio.BufferedSink;
-import org.song.http.framework.HttpEnum;
+import org.qinsong.http.framework.HttpEnum;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
