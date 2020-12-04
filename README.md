@@ -190,7 +190,7 @@ https://api.reol.top/api_test
 [star]: https://github.com/tohodog/QSHttp-java
 
 [licensesvg]: https://img.shields.io/badge/License-Apache--2.0-red.svg
-[license]: https://gitee.com/sakaue/QSRPC-starter/raw/master/LICENSE
+[license]: https://raw.githubusercontent.com/tohodog/QSHttp-java/master/LICENSE
 
 [qshttpsvg]: https://img.shields.io/badge/QSHttp--java-1.5.3-blue.svg
 
