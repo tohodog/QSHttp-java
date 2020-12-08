@@ -192,5 +192,5 @@ https://api.reol.top/api_test
 [licensesvg]: https://img.shields.io/badge/License-Apache--2.0-red.svg
 [license]: https://raw.githubusercontent.com/tohodog/QSHttp-java/master/LICENSE
 
-[qshttpsvg]: https://img.shields.io/badge/QSHttp--java-1.6.0-blue.svg
+[qshttpsvg]: https://img.shields.io/badge/QSHttp--java-1.6.0-brightgreen.svg
 
