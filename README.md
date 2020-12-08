@@ -180,7 +180,7 @@ https://api.reol.top/api_test
                         .syncExecute();
 ```
 ## Log
-### v1.5.4(2020-12-04)
+### v1.6.0(2020-12-04)
   * open source
 ## Other
   * 有问题请Add [issues](https://github.com/tohodog/QSHttp-java/issues)
