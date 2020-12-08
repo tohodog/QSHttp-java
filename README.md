@@ -18,7 +18,7 @@ AIP精简到极致,调用没有一行多余代码,几乎零成本使用,大道�
 <dependency>
     <groupId>com.github.tohodog</groupId>
     <artifactId>qshttp-java</artifactId>
-    <version>1.5.4</version>
+    <version>1.6.0</version>
 </dependency>
 ```
 
@@ -192,5 +192,5 @@ https://api.reol.top/api_test
 [licensesvg]: https://img.shields.io/badge/License-Apache--2.0-red.svg
 [license]: https://raw.githubusercontent.com/tohodog/QSHttp-java/master/LICENSE
 
-[qshttpsvg]: https://img.shields.io/badge/QSHttp--java-1.5.4-blue.svg
+[qshttpsvg]: https://img.shields.io/badge/QSHttp--java-1.6.0-blue.svg
 
